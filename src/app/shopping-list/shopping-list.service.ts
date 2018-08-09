@@ -16,7 +16,7 @@ export class ShoppingListService {
 
   addIngredient(ingredient: Ingredient) {
     this.ingredients.push(ingredient);
-    
+
     // tslint:disable-next-line:max-line-length
     // the event emitter we created up in the exported class, is now referenced to, 
     // attaching the emit method on it, requiring to emit a copy of the original ingeredients 
@@ -28,6 +28,9 @@ export class ShoppingListService {
     // for (let ingredient of ingredients) {
     //   this.addIngredient(ingredient);
     // }
+
+    // the push method in Angular can handle many objects, but then, it can't handle arrays,Angular has an operator (...) that makes
+    // the push method better, as seen below.
     this.ingredients.push(...ingredients);
     this.ingredientsChanged.emit(this.ingredients.slice());
   }
