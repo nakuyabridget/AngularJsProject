@@ -1,5 +1,5 @@
 import { Ingredient } from '../shared/ingredient.model';
-// the model of what recipes consist of
+
 export class Recipe {
   public name: string;
   public description: string;
