@@ -19,4 +19,8 @@ export class HeaderComponent {
       );
   }
 // tslint:disable-next-line:eofline
+
+onFetchData() {
+  this.dataStorageService.getRecipes();
+}
 }
